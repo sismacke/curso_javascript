@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadro de Funcionários</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .funcionario {
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .info {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quadro de Funcionários</h1>
+    <div id="quadroDeFuncionarios"></div>
+
+    <script>
+        // O conteúdo do arquivo JSON incluído diretamente no script
+        const escolaArray = [{
+            "Administracao": [
+                {
+                    "nome": "Maria Silva",
+                    "cargo": "Diretora",
+                    "idade": 45,
+                    "segmentosQueAtua": ["Ensino Fundamental I", "Ensino Médio"],
+                    "ramal": 101,
+                    "avatar": "https://raw.githubusercontent.com/sismacke/curso_javascript/dev/aula_3/avatares/1.webp"
+                },
+                {
+                    "nome": "João Souza",
+                    "cargo": "Vice-Diretor",
+                    "idade": 50,
+                    "segmentosQueAtua": ["Ensino Fundamental II", "Ensino Médio"],
+                    "ramal": 102,
+                    "avatar": "https://raw.githubusercontent.com/sismacke/curso_javascript/dev/aula_3/avatares/2.webp"
+                }
+            ],
+            "Professores": [
+                {
+                    "nome": "Ana Oliveira",
+                    "cargo": "Professora de Matemática",
+                    "idade": 34,
+                    "segmentosQueAtua": ["Ensino Fundamental II", "Ensino Médio"],
+                    "ramal": 201,
+                    "avatar": "https://raw.githubusercontent.com/sismacke/curso_javascript/dev/aula_3/avatares/3.webp"
+                },
+                {
+                    "nome": "Carlos Pereira",
+                    "cargo": "Professor de Português",
+                    "idade": 40,
+                    "segmentosQueAtua": ["Ensino Fundamental II"],
+                    "ramal": 202,
+                    "avatar": "https://raw.githubusercontent.com/sismacke/curso_javascript/dev/aula_3/avatares/4.webp"
+                },
+                {
+                    "nome": "Fernanda Lima",
+                    "cargo": "Professora de Ciências",
+                    "idade": 29,
+                    "segmentosQueAtua": ["Ensino Fundamental I", "Ensino Fundamental II"],
+                    "ramal": 203,
+                    "avatar": "https://raw.githubusercontent.com/sismacke/curso_javascript/dev/aula_3/avatares/5.webp"
+                }
+            ],
+            "Suporte": [
+                {
+                    "nome": "Roberto Almeida",
+                    "cargo": "Zelador",
+                    "idade": 50,
+                    "segmentosQueAtua": ["Ensino Fundamental I", "Ensino Fundamental II", "Ensino Médio"],
+                    "ramal": 301,
+                    "avatar": "https://raw.githubusercontent.com/sismacke/curso_javascript/dev/aula_3/avatares/6.webp"
+                },
+                {
+                    "nome": "Juliana Costa",
+                    "cargo": "Secretária",
+                    "idade": 27,
+                    "segmentosQueAtua": ["Ensino Fundamental I", "Ensino Fundamental II", "Ensino Médio"],
+                    "ramal": 302,
+                    "avatar": "https://raw.githubusercontent.com/sismacke/curso_javascript/dev/aula_3/avatares/7.webp"
+                }
+            ]
+        }];
+
+        window.onload = () => {
+            const quadroDeFuncionarios = document.getElementById('quadroDeFuncionarios');
+            const departamentos = ["Administracao", "Professores", "Suporte"];
+
+            // Processa cada departamento
+            for (let i = 0; i < escolaArray.length; i++) {
+                const departamento = escolaArray[i];
+
+                // Processa cada grupo de funcionários dentro de um departamento
+                for (let j = 0; j < departamentos.length; j++) {
+                    const grupo = departamento[departamentos[j]];
+
+                    // Processa cada funcionário dentro do grupo
+                    for (let k = 0; k < grupo.length; k++) {
+                        const funcionario = grupo[k];
+                        const funcionarioDiv = document.createElement('div');
+                        funcionarioDiv.classList.add('funcionario');
+                        
+                        const avatarImg = document.createElement('img');
+                        avatarImg.src = funcionario.avatar;
+                        avatarImg.alt = funcionario.nome;
+                        avatarImg.classList.add('avatar');
+                        
+                        const infoDiv = document.createElement('div');
+                        infoDiv.classList.add('info');
+                        
+                        const nome = document.createElement('h2');
+                        nome.textContent = funcionario.nome;
+                        
+                        const cargo = document.createElement('p');
+                        cargo.textContent = `Cargo: ${funcionario.cargo}`;
+                        
+                        const idade = document.createElement('p');
+                        idade.textContent = `Idade: ${funcionario.idade}`;
+                        
+                        const segmentos = document.createElement('p');
+                        segmentos.textContent = `Segmentos que Atua: ${funcionario.segmentosQueAtua.join(', ')}`;
+                        
+                        const ramal = document.createElement('p');
+                        ramal.textContent = `Ramal: ${funcionario.ramal}`;
+                        
+                        infoDiv.appendChild(nome);
+                        infoDiv.appendChild(cargo);
+                        infoDiv.appendChild(idade);
+                        infoDiv.appendChild(segmentos);
+                        infoDiv.appendChild(ramal);
+                        
+                        funcionarioDiv.appendChild(avatarImg);
+                        funcionarioDiv.appendChild(infoDiv);
+                        
+                        quadroDeFuncionarios.appendChild(funcionarioDiv);
+                    }
+                }
+            }
+        };
+    </script>
+</body>
+</html>

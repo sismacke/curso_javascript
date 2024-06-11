@@ -8,7 +8,7 @@ const bandasMusicas = {
 
 //console.log(bandasMusicas);
 
-const bandasDetalhadas = {
+const bandasDetalhadas = [{
     'Megadeth': {
         'musicas': ['Holy Wars', 'Peace Sells', 'Hangar 18', 'Symphony of Destruction', 'Tornado of Souls'],
         'integrantes': ['Dave Mustaine', 'David Ellefson', 'Kiko Loureiro', 'Dirk Verbeuren'],
@@ -39,9 +39,9 @@ const bandasDetalhadas = {
         'formacao': 1983,
         'genero': 'Thrash Metal'
     }
-};
+}];
 
-console.log(bandasDetalhadas);
+// console.log(bandasDetalhadas);
 
 
 // Convertendo as chaves do objeto para um array
@@ -72,3 +72,8 @@ bandasNomes.forEach(banda => {
         console.log('---');
     }
 });
+
+
+for(var i=0; i < bandasDetalhadas.length; i++){
+    console.log(bandasDetalhadas[i].Megadeth.musicas);
+}

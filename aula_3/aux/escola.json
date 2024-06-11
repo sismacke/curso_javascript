@@ -1,0 +1,64 @@
+{
+    "Administracao": [
+        {
+            "nome": "Maria Silva",
+            "cargo": "Diretora",
+            "idade": 45,
+            "segmentosQueAtua": ["Ensino Fundamental I", "Ensino Médio"],
+            "ramal": 101,
+            "avatar": "https://raw.githubusercontent.com/sismacke/curso_javascript/dev/aula_3/avatares/1.webp"
+        },
+        {
+            "nome": "João Souza",
+            "cargo": "Vice-Diretor",
+            "idade": 50,
+            "segmentosQueAtua": ["Ensino Fundamental II", "Ensino Médio"],
+            "ramal": 102,
+            "avatar": "https://raw.githubusercontent.com/sismacke/curso_javascript/dev/aula_3/avatares/2.webp"
+        }
+    ],
+    "Professores": [
+        {
+            "nome": "Ana Oliveira",
+            "cargo": "Professora de Matemática",
+            "idade": 34,
+            "segmentosQueAtua": ["Ensino Fundamental II", "Ensino Médio"],
+            "ramal": 201,
+            "avatar": "https://raw.githubusercontent.com/sismacke/curso_javascript/dev/aula_3/avatares/3.webp"
+        },
+        {
+            "nome": "Carlos Pereira",
+            "cargo": "Professor de Português",
+            "idade": 40,
+            "segmentosQueAtua": ["Ensino Fundamental II"],
+            "ramal": 202,
+            "avatar": "https://raw.githubusercontent.com/sismacke/curso_javascript/dev/aula_3/avatares/4.webp"
+        },
+        {
+            "nome": "Fernanda Lima",
+            "cargo": "Professora de Ciências",
+            "idade": 29,
+            "segmentosQueAtua": ["Ensino Fundamental I", "Ensino Fundamental II"],
+            "ramal": 203,
+            "avatar": "https://raw.githubusercontent.com/sismacke/curso_javascript/dev/aula_3/avatares/5.webp"
+        }
+    ],
+    "Suporte": [
+        {
+            "nome": "Roberto Almeida",
+            "cargo": "Zelador",
+            "idade": 50,
+            "segmentosQueAtua": ["Ensino Fundamental I", "Ensino Fundamental II", "Ensino Médio"],
+            "ramal": 301,
+            "avatar": "https://raw.githubusercontent.com/sismacke/curso_javascript/dev/aula_3/avatares/6.webp"
+        },
+        {
+            "nome": "Juliana Costa",
+            "cargo": "Secretária",
+            "idade": 27,
+            "segmentosQueAtua": ["Ensino Fundamental I", "Ensino Fundamental II", "Ensino Médio"],
+            "ramal": 302,
+            "avatar": "https://raw.githubusercontent.com/sismacke/curso_javascript/dev/aula_3/avatares/7.webp"
+        }
+    ]
+}

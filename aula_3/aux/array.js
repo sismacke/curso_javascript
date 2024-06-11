@@ -1,13 +1,6 @@
 
 
 
-
-
-
-
-
-
-
 const bandas = ['Megadeth', 'Metallica', 'Slayer', 'Anthrax', 'Testament'];
 
 const musicas = ['Holy Wars', 'Master of Puppets', 'Raining Blood', 'Madhouse', 'Over the Wall'];
