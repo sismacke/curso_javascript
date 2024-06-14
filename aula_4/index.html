@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Funções Síncronas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .loader {
+            width: 100px;
+            height: 10px;
+            background-color: #f3f3f3;
+            position: relative;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        .bar {
+            width: 30px;
+            height: 10px;
+            background-color: #3498db;
+            position: absolute;
+            animation: move 1s linear infinite;
+        }
+        @keyframes move {
+            from {
+                left: 0;
+            }
+            to {
+                left: 100%;
+            }
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Funções Síncronas</h1>
+    <div class="loader">
+        <div class="bar"></div>
+    </div>
+    <button onclick="funcao1()">Função 1</button>
+    <button onclick="funcao2()">Função 2</button>
+    <button onclick="funcao3()">Função 3</button>
+
+    <script>
+        const funcao1 = () => {
+            const start = Date.now();
+            while (Date.now() - start < 3000) {
+            }
+            console.log('Função 1 concluída');
+        };
+
+        const funcao2 = () => {
+            const start = Date.now();
+            while (Date.now() - start < 4000) {
+            }
+            console.log('Função 2 concluída');
+        };
+
+        const funcao3 = () => {
+            const start = Date.now();
+            while (Date.now() - start < 2000) {
+            }
+            console.log('Função 3 concluída');
+        };
+    </script>
+</body>
+</html>
