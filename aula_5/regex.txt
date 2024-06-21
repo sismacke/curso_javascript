@@ -1,0 +1,40 @@
+console.log("AULA 05")
+
+const padraoRegexp = /a/; //Localiza o primeiro valor que leu, no caso o primeiro 'a' que ler.
+
+const texto = 'JavaScript';
+const novoTexto = texto.replace(padraoRegexp, 'B');
+
+console.log('LITERAL')
+console.log(`Antes: ${texto}`)
+console.log(`Depois: ${novoTexto}`)
+
+
+const padraoRegexp2 = /a/g; //g -> global, localizar o valor em todo o texto, todos os 'a'
+
+const texto2 = 'JavaScript';
+const novoTexto2 = texto.replace(padraoRegexp2, 'B');
+
+console.log('LITERAL - TODOS')
+console.log(`ANTES ${texto2}`)
+console.log(`DEPOIS ${novoTexto2}`)
+
+const padraoRegexp3 = /a/gi; //i -> case-sesitive, pegar todos os 'a' independente se está maiscula ou minuscula.
+
+const texto3 = "banana apple orange";
+
+const ocorrencias = texto3.match(padraoRegexp3);
+
+console.log('FLAG');
+console.log(`ANTES: ${texto3}`);
+console.log(`DEPOIS: ${ocorrencias}`);
+
+const padraoRegexp4 = /(a|d)/g; //-> Localiza todos os 'a' e 'd' no texto
+
+const texto4 = "lorem abc def ";
+
+const novoTexto4 = texto4.replace(padraoRegexp4, 'B');
+
+console.log('FLAG');
+console.log(`ANTES: ${texto4}`);
+console.log(`DEPOIS: ${novoTexto4}`);
