@@ -49,6 +49,10 @@ Local: Sistemas de Ensino Mackenzie (4 Andar)**
 
 - Classes (get, set, constructor)
 - Regexp
-- Fetch (APIs)
+- Try-Catch
 
-*Aula 6 - Projeto Final*
+*Aula 6* 
+
+- fetch
+
+*Aula 7 - Projeto Final*
